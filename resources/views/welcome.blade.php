@@ -47,7 +47,7 @@
 
         <div class=" min-h-screen sm:items-center sm:pt-0">
             <div class="container">
-                <button onclick="topFunction()" id="myBtn" title="Go to top">Kembali Atas</button>
+                <button onclick="topFunction()" id="myBtn" title="Go to top" >Kembali Atas</button>
                 <div class="row">
                     <form action="/" method="post" enctype="multipart/form-data">
                         @csrf
@@ -83,7 +83,7 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->message }}</td>
-                                <td><a href="https://api.whatsapp.com/send?phone=62{{ $user->phone }}&text={{ $user->message }} " target="_blank"><button class="btn btn-success text-center"> Kirim</button></a></td>
+                                <td><a href="https://api.whatsapp.com/send?phone=62{{ $user->phone }}&text={{ $user->message }} " target="_blank"><button class="btn btn-success text-center"> Kirim</button></a> <a href="/hapus/{{ $user->id }}"><button class="btn btn-danger">Hapus</button></a></td>
                             </tr>
                             @empty
                             <td colspan="5" class="table-active text-center">Tidak Ada Data</td>

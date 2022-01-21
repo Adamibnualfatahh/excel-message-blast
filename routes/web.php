@@ -32,3 +32,6 @@ Route::get('/hapus', 'App\Models\Data@delete');
 Route::get('about',function(){
     return view('about');
 });
+
+
+Route::get('/hapus/{id}', 'App\Models\Data@deleteId');

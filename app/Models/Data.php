@@ -30,4 +30,9 @@ class Data extends Model
         DB::table('data')->delete();
         return redirect()->back()->withSuccess('Data Berhasil Dihapus');
     }
+    public function deleteId($id)
+    {
+        DB::table('data')->where('id',$id)->delete();
+        return redirect()->back()->withSuccess('Data Berhasil Dihapus');
+    }
 }
