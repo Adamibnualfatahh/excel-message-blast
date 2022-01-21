@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $user = Data::all();
     return view('welcome',['user'=>$user]);
-});
+})->name('home');
 
 Route::post('/', function () {
     Excel::import(new UsersImport, request()->file('file'));
